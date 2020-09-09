@@ -9,13 +9,13 @@ export default function Home({ data }) {
       <SEO title="home" />
       <h1>Создание сайтов под ключ. Заказать сайт в Киеве и Днепре -</h1>
       <h4>Posts</h4>
-      {data.allWpPost.nodes.map((node) => (
+      {data.allWordpressPost.nodes.map((node) => (
         <div key={node.slug}>
-          //highlight-start
+          
           <Link to={node.slug}>
             <p>{node.title}</p>
           </Link>
-          //highlight-end
+          
           <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
         </div>
       ))}
@@ -25,12 +25,13 @@ export default function Home({ data }) {
 
 export const pageQuery = graphql`
   query {
-    allWpPost(sort: { fields: [date] }) {
-        nodes {
-            title
-            excerpt
-            slug
-        }
+    allWordpressPost(filter: {categories: {elemMatch: {wordpress_id: {eq: 96}}}}) {
+      nodes {
+        title
+        slug
+        content
+        excerpt
+      }
     }
   }
 `

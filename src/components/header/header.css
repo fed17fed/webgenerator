@@ -3,3 +3,12 @@
     align-items: center;
     height: 60px;
 }
+.had-language, .had-tel {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+}
+.had-logo {
+    padding-top: 10px;
+}

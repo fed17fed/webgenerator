@@ -11,18 +11,18 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
     {
-      allWpPost(sort: { fields: [date] }) {
+      allWordpressPost(filter: {categories: {elemMatch: {wordpress_id: {eq: 96}}}}) {
         nodes {
-            title
-            excerpt
-            content
-            slug
+          title
+          slug
+          content
+          excerpt
         }
       }
     }
   `).then(result => {
     //highlight-start
-    result.data.allWpPost.nodes.forEach((node) => {
+    result.data.allWordpressPost.nodes.forEach((node) => {
       createPage({
         path: node.slug,
         component: path.resolve(`./src/templates/sites.js`),

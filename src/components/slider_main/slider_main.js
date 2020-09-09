@@ -2,15 +2,9 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Image from "../image"
-import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
-import Nav from "react-bootstrap/Nav"
-import NavDropdown from "react-bootstrap/NavDropdown"
-import "./header.css"
+import "./slider_main.css"
 
-const handleSelect = (eventKey) => console.log(eventKey);
-const Header = ({ siteTitle }) => (
+const SliderMain = ({ siteTitle }) => (
   <header
     style={{      
       marginBottom: `1.45rem`,
@@ -77,4 +71,4 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default SliderMain
