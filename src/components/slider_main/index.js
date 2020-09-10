@@ -1,3 +1,3 @@
-import SliderMain from './header'
+import SliderMain from './slider_main'
 
 export default SliderMain

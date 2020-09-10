@@ -7,7 +7,7 @@ export default function Sites({ data }) {
   console.log(post)
   return (
     <Layout>
-      <div>
+      <div className="container">
         <h1>{post.title}</h1>
         <div>{post.slug}</div>
         <img src={post.featured_media.link}></img>
