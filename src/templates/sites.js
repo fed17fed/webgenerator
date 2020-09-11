@@ -10,7 +10,7 @@ export default function Sites({ data }) {
       <div className="container">
         <h1>{post.title}</h1>
         <div>{post.slug}</div>
-        <img src={post.featured_media.link}></img>
+        <img src={post.featured_media.link} alt=""></img>
         <div dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>
       <Link to="/">
